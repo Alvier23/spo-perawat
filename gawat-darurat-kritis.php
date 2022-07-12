@@ -1,3 +1,9 @@
+<?php
+session_start();
+if ($_SESSION['status'] != "login") {
+    header("Location: login.php");
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -53,7 +59,9 @@
                 <li class="nav-item active">
                     <a class="nav-link mr-3" href="index.php">Home</a>
                 </li>
-                <a class="btn btn-outline-primary" href="#">Sign up</a>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="#">Hai, <?= $_SESSION['username']; ?></a>
+                </li>
             </ul>
         </div>
     </nav>

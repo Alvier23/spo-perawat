@@ -18,5 +18,6 @@ if (file_exists($namaFile)) {
 } else {
     echo "<script>
     alert('File tidak ada');
+    document.location.href = 'index.php';
     </script>";
 }

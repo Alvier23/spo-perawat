@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2022 at 05:31 PM
+-- Generation Time: Jul 12, 2022 at 01:20 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -60,6 +60,27 @@ CREATE TABLE `data_spo` (
 INSERT INTO `data_spo` (`id`, `jenis`, `kategori`, `file`) VALUES
 (1, 'ANC', 'Maternitas', '1827801756_Template SPO.doc');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(128) NOT NULL,
+  `username` varchar(128) NOT NULL,
+  `password` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `nama`, `username`, `password`) VALUES
+(1, 'Fikky', 'fikky', 'fikky123'),
+(2, 'tes', 'tes123', 'tes123');
+
 --
 -- Indexes for dumped tables
 --
@@ -77,6 +98,12 @@ ALTER TABLE `data_spo`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -91,6 +118,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `data_spo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -51,7 +51,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link mr-3" href="/sop_keperawatan">Home</a>
+                    <a class="nav-link mr-3" href="index.php">Home</a>
                 </li>
                 <a class="btn btn-outline-primary" href="#">Sign up</a>
             </ul>
